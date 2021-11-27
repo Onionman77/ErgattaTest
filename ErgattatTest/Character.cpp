@@ -1,10 +1,12 @@
 #include "Character.h"
 
-void Character::attack() {
+//handle attacking the provided character
+void Character::attack(Character* characterToAttack) {
 
 }
 
-void Character::defend() {
+//handle defending against provided character
+void Character::defend(Character* characterToDefendFrom) {
 
 }
 

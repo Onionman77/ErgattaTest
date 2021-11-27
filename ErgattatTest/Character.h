@@ -25,8 +25,8 @@ protected:
 	MovementType movementType = Ground;
 
 public:
-	void attack();
-	void defend();
+	void attack(Character* characterToAttack);  //handle attacking the provided character
+	void defend(Character* characterToDefendFrom); //handle defending against provided character
 	void move();
 };
 
