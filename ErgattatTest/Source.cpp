@@ -35,7 +35,7 @@ void initializeGame() {
 
 //check if requirements are met to enter to a new level
 void checkForLevelLoad() {
-	bool enteringNewLevel = false;
+	bool enteringNewLevel = false; //check keeping track if we've satisfied conditions to enter a new level or not
 
 	if (enteringNewLevel)
 		initializeLevel();
@@ -46,7 +46,7 @@ void checkForLevelLoad() {
 void initializeLevel() {
 	cleanupLevel();
 
-	int numLevelMinionsToInitialize = 0;
+	int numLevelMinionsToInitialize = 0; //counter for number of minions to bring into level
 	if (numLevelMinionsToInitialize > 0)
 		levelMinions = new Minion[numLevelMinionsToInitialize];
 }

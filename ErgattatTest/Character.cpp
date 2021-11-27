@@ -1,5 +1,18 @@
 #include "Character.h"
 
+void Character::attack() {
+
+}
+
+void Character::defend() {
+
+}
+
+void Character::move() {
+
+}
+
+
 PlayerOne::PlayerOne() {
 	health = 100;
 	armor = 100;

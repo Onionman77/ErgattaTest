@@ -23,6 +23,11 @@ protected:
 	WeaponType primaryWeaponType = None;
 	WeaponType secondaryWeaponType = None;
 	MovementType movementType = Ground;
+
+public:
+	void attack();
+	void defend();
+	void move();
 };
 
 class PlayerOne : Character {
