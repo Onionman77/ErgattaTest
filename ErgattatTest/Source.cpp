@@ -11,6 +11,7 @@ Minion* levelMinions;
 void initializeGame();
 void checkForLevelLoad();
 void initializeLevel();
+void cleanupLevel();
 void handleEnemyMovements();
 void resolveConflicts();
 void checkForPlayerInputs();
@@ -27,15 +28,12 @@ void main() {
 	}
 }
 
-
+//perform basic initialization of the game's resources
 void initializeGame() {
-
+	levelMinions = NULL;
 }
 
-void initializeCharacters() {
-
-}
-
+//check if requirements are met to enter to a new level
 void checkForLevelLoad() {
 	bool enteringNewLevel = false;
 
@@ -43,8 +41,20 @@ void checkForLevelLoad() {
 		initializeLevel();
 }
 
+//perform basic tasks for level initialization
+//cleanup any previously initialized minions if there are any
 void initializeLevel() {
+	cleanupLevel();
 
+	int numLevelMinionsToInitialize = 0;
+	if (numLevelMinionsToInitialize > 0)
+		levelMinions = new Minion[numLevelMinionsToInitialize];
+}
+
+//cleanup any previously allocated minions
+void cleanupLevel() {
+	if (levelMinions != NULL)
+		delete(levelMinions);
 }
 
 void checkForPlayerInputs() {
